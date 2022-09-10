@@ -49,12 +49,12 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.fqvsz.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
+    `mongodb+srv://newproject:gUY4fbBPfPXfEIjb@cluster0.uj55feu.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() => {
-    app.listen(process.env.PORT || 5000);
-    console.log("Connected to Database!")
+    app.listen(5000);
   })
-  .catch((err) => {
-    console.log("Not connected to Database!", err);
+  .catch(err => {
+    console.log(err);
   });
+  
