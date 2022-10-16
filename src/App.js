@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
+import Login from './components/Login';
+import Signup from './components/Signup';
 import NoteState from "./context/notes/NoteState";
 import './App.css';
 import Alert from './components/Alert';
@@ -20,6 +22,10 @@ function App() {
             <Route exact path='/' element={<Home/>}>
           </Route>
           <Route exact path='/about' element={<About/>}>
+            </Route>
+            <Route exact path='/login' element={<Login/>}>
+            </Route>
+            <Route exact path='/signup' element={<Signup/>}>
             </Route>
         </Routes>
         </div>
