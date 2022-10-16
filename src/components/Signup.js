@@ -20,7 +20,10 @@ const Signup = () => {
           if(json.success){
             // save the auth-token and redirect
             localStorage.setItem('token', json.authtoken)
-            history.push("/");
+            const sendSubmit = () => {
+                history.push("/")
+                };
+           console.log(sendSubmit)
           }else{
             alert("Invalid credentials");
           }
@@ -55,4 +58,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
+export default Signup;
