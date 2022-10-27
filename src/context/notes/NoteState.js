@@ -49,10 +49,11 @@ const NoteState = (props) => {
         "auth-token": localStorage.getItem("token")
       }
     });
-    const json = response.json();
-    console.log(json)
+     const json = response.json();
+     console.log(json)
 
-    console.log("Deleting the note with id" + id);
+
+    // console.log("Deleting the note with id" + id);
     const newNotes = notes.filter((note) => { return note._id !== id })
     setNotes(newNotes)
   }
@@ -68,8 +69,8 @@ const NoteState = (props) => {
       },
       body: JSON.stringify({ title, description, tag })
     });
-    const json = await response.json();
-    console.log(json)
+     const json = await response.json();
+     console.log(json)
 
     let newNotes = JSON.parse(JSON.stringify(notes))
     // Logic to edit in client
